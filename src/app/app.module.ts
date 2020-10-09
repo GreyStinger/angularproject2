@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { NzGridModule } from 'ng-zorro-antd/grid';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
@@ -21,11 +24,14 @@ registerLocaleData(en);
     AppComponent,
   ],
   imports: [
+    NzLayoutModule,
+    NzGridModule,
     BrowserModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     NzPageHeaderModule,
+    MatToolbarModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
